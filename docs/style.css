@@ -10,7 +10,7 @@ body {
 
 /* ヘッダー */
 header {
-  background-color: #da00a3;
+  background-color: #3800bb;
   padding: 1rem;
   text-align: center;
 }
@@ -33,7 +33,7 @@ main {
 /* 見出し */
 h2 {
   color: #2c3e50;
-  border-left: 6px solid #ff0fc3;
+  border-left: 6px solid #3800bb;
   padding-left: 0.5rem;
   margin-top: 2rem;
 }
@@ -61,7 +61,7 @@ li {
 /* コードブロック */
 pre {
   background: #f4f6f8;
-  border-left: 4px solid #ff0fc3;
+  border-left: 4px solid #3800bb;
   padding: 0.8rem;
   overflow-x: auto;
   border-radius: 6px;
