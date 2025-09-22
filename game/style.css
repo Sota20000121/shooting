@@ -8,6 +8,16 @@ body {
   margin: 0;
 }
 
+#gameTitle {
+  font-family: 'Orbitron', 'Meiryo', sans-serif;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 0 0 16px #7700ff, 0 0 4px #fff;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+}
+
 #gameCanvas {
   background: #fff;
   border:3px solid #7700ff;
