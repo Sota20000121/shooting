@@ -22,6 +22,13 @@ function tryshoot() {
     })
 }
 
+function updateScore() {
+    const scoreBoard = document.getElementById("scoreBoard");
+    scoreBoard.innerText = `Score: ${player.score}`;
+    const lifeBoard = document.getElementById("lifeBoard");
+    lifeBoard.innerText = `Life: ${player.life}`;
+}
+
 window.addEventListener("keydown", (e) => {
     if(e.key === "ArrowLeft") {
         if(player.x>10){
@@ -49,6 +56,7 @@ function update() {
     spawnEnemy(canvas);
     updateEnemies(canvas);
     handleCollisions();
+    updateScore();
 }
 
 function draw(){
@@ -57,11 +65,20 @@ function draw(){
 
     drawPlayer(ctx);
 
-    ctx.fillStyle = "#7700ff";
     for (let i = 0; i < bullets.length ; i++) {
         const bullet = bullets[i];
-        ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
 
+        // 発光（ぼかし）レイヤー
+        ctx.save();
+        ctx.fillStyle = "#7700ff";         
+        ctx.shadowBlur = 10;            
+        ctx.shadowColor = "#7700ff";
+        ctx.fillRect(bullet.x - 2, bullet.y - 2, bullet.width + 4, bullet.height + 4);
+        ctx.restore();
+
+        // 弾本体（コア）
+        ctx.fillStyle = "#fff";
+        ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
     }
 
     ctx.fillStyle = "#ff00f2ff";

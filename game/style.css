@@ -8,6 +8,13 @@ body {
   margin: 0;
 }
 
+#scoreBoard, #lifeBoard {
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Orbitron', 'Meiryo', sans-serif;
+  text-shadow: 0 0 16px #7700ff, 0 0 4px #fff;
+}
+
 #gameTitle {
   font-family: 'Orbitron', 'Meiryo', sans-serif;
   font-size: 2.5rem;

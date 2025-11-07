@@ -5,6 +5,7 @@ export const player = {
     height: 30,
     color : "#7700ff",
     life : 3,
+    score: 0,
 };
 
 export function initPlayer(canvas) {
